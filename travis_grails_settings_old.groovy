@@ -1,9 +1,9 @@
 grails.project.dependency.distribution = {
-  remoteRepository(id:"ala-repo-snapshot", url:"http://nexus.ala.org.au/content/repositories/snapshots") {
+  remoteRepository(id:"uk-nbn-snapshots", url:"http://repository.gbif.org/content/repositories/snapshots") {
     authentication username: System.getenv("TRAVIS_DEPLOY_USERNAME"), password: System.getenv("TRAVIS_DEPLOY_PASSWORD")
   }
 
-  remoteRepository(id:"ala-repo-release",  url:"http://nexus.ala.org.au/content/repositories/releases") {
+  remoteRepository(id:"uk-nbn-release",  url:"http://repository.gbif.org/content/repositories/releases") {
     authentication username: System.getenv("TRAVIS_DEPLOY_USERNAME"), password: System.getenv("TRAVIS_DEPLOY_PASSWORD")
   }
 }
