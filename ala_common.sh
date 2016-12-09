@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export TZ=Australia/Canberra
+export TZ=Europe/London
 date
 
 # all ALA projects should use/source this value from this script
