@@ -1,17 +1,12 @@
 <settings xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd" xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <servers>
     <server>
-      <id>ala-repo</id>
+      <id>uk-nbn-snapshots</id>
       <username>${env.TRAVIS_DEPLOY_USERNAME}</username>
       <password>${env.TRAVIS_DEPLOY_PASSWORD}</password>
     </server>
     <server>
-      <id>ala-repo-release</id>
-      <username>${env.TRAVIS_DEPLOY_USERNAME}</username>
-      <password>${env.TRAVIS_DEPLOY_PASSWORD}</password>
-    </server>
-    <server>
-      <id>ala-repo-snapshot</id>
+      <id>uk-nbn-releases</id>
       <username>${env.TRAVIS_DEPLOY_USERNAME}</username>
       <password>${env.TRAVIS_DEPLOY_PASSWORD}</password>
     </server>
