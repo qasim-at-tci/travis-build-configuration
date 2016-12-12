@@ -17,16 +17,6 @@
     </server>
 
   </servers>
-
-  <mirrors>
-    <mirror>
-      <!--This sends everything else to /public -->
-      <id>nexus</id>
-      <mirrorOf>*,!uk-nbn-snapshots,!uk-nbn-releases</mirrorOf>
-      <url>http://repository.gbif.org/content/groups/public/</url>
-    </mirror>
-  </mirrors>
-
   <profiles>
     <profile>
       <id>nexus</id>
@@ -40,6 +30,11 @@
           <releases><enabled>true</enabled></releases>
           <snapshots><enabled>true</enabled></snapshots>
         </repository>
+        <repository>
+            <id>gbif</id>
+            <name>GBIF Nexus Repository</name>
+            <url>http://repository.gbif.org/content/groups/public/</url>
+        </repository>                 
         <repository>
             <id>ala-nexus</id>
             <name>ALA Nexus Repository</name>
