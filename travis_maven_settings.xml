@@ -41,11 +41,10 @@
           <snapshots><enabled>true</enabled></snapshots>
         </repository>
         <repository>
-          <id>ALA</id>
-          <url>http://nexus.ala.org.au/content/groups/public/</url>
-          <releases><enabled>true</enabled></releases>
-          <snapshots><enabled>true</enabled></snapshots>
-        </repository>                
+            <id>ala-nexus</id>
+            <name>ALA Nexus Repository</name>
+            <url>http://nexus.ala.org.au/content/groups/public/</url>
+        </repository>              
       </repositories>
 
       <pluginRepositories>
