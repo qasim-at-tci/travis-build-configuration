@@ -8,7 +8,7 @@ export ALA_MAVEN_REPO_URL="http://repository.gbif.org/content/repositories"
 
 # we do not need this, if a custom <id> is NOT set (NOT used), and therefore NOT passed to maven deploy:deploy-file mojo in repositoryID
 # maven will look for the "default" <id>remote-repository</id> in ~/.m2/settings.xml
-export ALA_MAVEN_REPO_ID="ala-repo"
+export ALA_MAVEN_REPO_ID="uk-nbn-snapshots"
 
 # default groupId for ALA projects
 export ALA_MAVEN_GROUP_ID="uk.org.nbn"
