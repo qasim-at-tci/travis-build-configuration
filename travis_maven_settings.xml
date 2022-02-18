@@ -46,19 +46,6 @@
         </repository>        
       </repositories>
               
-      <distributionManagement>
-          <repository>
-<!--                <id>uk-nbn</id> -->
-                    <name>Internal Releases</name>
-                    <url>https://repository.gbif.org/repository/uk-nbn-releases/</url>
-          </repository>
-          <snapshotRepository>
-<!--                <id>uk-nbn</id> -->
-                    <name>Internal Releases</name>
-                    <url>https://repository.gbif.org/repository/uk-nbn-snapshots/</url>
-          </snapshotRepository>
-      </distributionManagement>
-              
       <pluginRepository>
           <id>central</id>
           <url>http://repo.maven.org/maven2</url>
