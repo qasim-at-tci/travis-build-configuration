@@ -42,23 +42,15 @@
             <id>ala</id>
             <name>ALA Nexus Repository</name>
             <url>http://nexus.ala.org.au/content/groups/public/</url>
-        </repository>
-        <repository>
-          <id>central</id>
-          <url>http://central</url>
-          <releases><enabled>true</enabled></releases>
-          <snapshots><enabled>true</enabled></snapshots>
-        </repository>
+        </repository>        
       </repositories>
 
-      <pluginRepositories>
-        <pluginRepository>
+      <pluginRepository>
           <id>central</id>
-          <url>http://central</url>
+          <url>http://repo.maven.org/maven2</url>
           <releases><enabled>true</enabled></releases>
           <snapshots><enabled>true</enabled></snapshots>
-        </pluginRepository>
-      </pluginRepositories>
+      </pluginRepository>
 
     </profile>
   </profiles>
