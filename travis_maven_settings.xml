@@ -17,6 +17,20 @@
     </server>
 
   </servers>
+  
+  <distributionManagement>
+    <repository>
+<!--       <id>uk-nbn</id> -->
+      <name>Internal Releases</name>
+      <url>https://repository.gbif.org/repository/uk-nbn-releases/</url>
+    </repository>
+    <snapshotRepository>
+<!--       <id>uk-nbn</id> -->
+      <name>Internal Releases</name>
+      <url>https://repository.gbif.org/repository/uk-nbn-snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
+          
 <!--          
   <mirrors>
     <mirror>
