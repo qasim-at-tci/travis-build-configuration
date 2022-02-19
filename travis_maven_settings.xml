@@ -45,13 +45,15 @@
             <url>http://nexus.ala.org.au/content/groups/public/</url>
         </repository>        
       </repositories>
-              
-      <pluginRepository>
+             
+      <pluginRepositories>
+        <pluginRepository>
           <id>central</id>
           <url>http://repo.maven.org/maven2</url>
           <releases><enabled>true</enabled></releases>
           <snapshots><enabled>true</enabled></snapshots>
-      </pluginRepository>
+        </pluginRepository>
+      </pluginRepositories>
 
     </profile>
   </profiles>
