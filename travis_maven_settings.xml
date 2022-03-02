@@ -35,6 +35,16 @@
       <!--all requests to nexus via the mirror -->
       <repositories>
         <repository>
+            <id>uk-nbn-releases</id>
+            <name>NBN Nexus</name>
+            <url>https://repository.gbif.org/repository/uk-nbn-releases/</url>
+        </repository>
+         <repository>
+            <id>uk-nbn-snapshots</id>
+            <name>NBN Nexus</name>
+            <url>https://repository.gbif.org/repository/uk-nbn-snapshots/</url>
+        </repository>
+        <repository>
             <id>gbif</id>
             <name>GBIF Nexus Repository</name>
             <url>http://repository.gbif.org/content/groups/public/</url>
