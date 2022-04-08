@@ -1,0 +1,46 @@
+// To use, add the following to build.gradle:
+// apply from: 'https://raw.githubusercontent.com/AtlasOfLivingAustralia/travis-build-configuration/master/travis_grails_publish.gradle'
+
+apply plugin:"maven-publish"
+
+publishing {
+    repositories {
+        maven {
+            name 'Nexus'
+            url "https://repository.gbif.org/repository/${project.version.endsWith('-SNAPSHOT') ? 'uk-nbn-snapshots' : 'uk-nbn-releases' }"
+            credentials {
+                username = System.getenv('TRAVIS_DEPLOY_USERNAME')
+                password = System.getenv('TRAVIS_DEPLOY_PASSWORD')
+            }
+        }
+    }
+    publications {
+        mavenJar(MavenPublication) {
+            pom.withXml {
+                def pomNode = asNode()
+                pomNode.dependencyManagement.replaceNode {}
+
+                // simply remove dependencies without a version
+                // version-less dependencies are handled with dependencyManagement
+                // see https://github.com/spring-gradle-plugins/dependency-management-plugin/issues/8 for more complete solutions
+                pomNode.dependencies.dependency.findAll {
+                    it.version.text().isEmpty()
+                }.each {
+                    it.replaceNode {}
+                }
+            }
+            from components.web
+
+            if (bootRepackage && bootRepackage.enabled && bootRepackage.classifier) {
+                def repackagedFile = file("$libsDir/$project.name-$project.version-${bootRepackage.classifier}.jar")
+                if (repackagedFile.exists()) {
+                    artifact(repackagedFile) {
+                        classifier bootRepackage.classifier
+                    }
+                } else {
+                    logger.quiet("Spring Boot repackage with classifier specified but file is not present!")
+                }
+            }
+        }
+    }
+}
