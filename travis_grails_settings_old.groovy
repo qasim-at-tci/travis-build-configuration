@@ -3,7 +3,7 @@ grails.project.dependency.distribution = {
     authentication username: System.getenv("TRAVIS_DEPLOY_USERNAME"), password: System.getenv("TRAVIS_DEPLOY_PASSWORD")
   }
 
-  remoteRepository(id:"uk-nbn-release",  url:"http://repository.gbif.org/content/repositories/uk-nbn-releases") {
+  remoteRepository(id:"uk-nbn-releases",  url:"http://repository.gbif.org/content/repositories/uk-nbn-releases") {
     authentication username: System.getenv("TRAVIS_DEPLOY_USERNAME"), password: System.getenv("TRAVIS_DEPLOY_PASSWORD")
   }
 }
