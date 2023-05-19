@@ -18,7 +18,7 @@ MAVEN_REPO="uk-nbn-snapshots";
 
 function ala_travis_grails_setup_env {
     rm -rf ~/.sdkman
-    curl -s http://get.sdkman.io | bash
+    curl -s https://get.sdkman.io | bash
 
     echo "sdkman_auto_answer=true" > ~/.sdkman/etc/config
     source ~/.sdkman/bin/sdkman-init.sh
